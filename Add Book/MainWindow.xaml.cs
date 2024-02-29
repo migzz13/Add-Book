@@ -23,5 +23,10 @@ namespace Add_Book
         {
             InitializeComponent();
         }
+
+        private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
