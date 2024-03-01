@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Add_Book"
         mc:Ignorable="d"
-        Title="MainWindow" Height="434" Width="697" ResizeMode="CanMinimize">
+        Title="Address Book" Height="434" Width="697" ResizeMode="CanMinimize">
     <Grid Margin="0,0,0,-6" Background="#FFE7DFEE">
         <Grid HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="704" Background="#FFB3A1C9"/>
         <Label Content="Address Book" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" FontSize="23" FontWeight="Bold" Height="40"/>
@@ -13,15 +13,15 @@
         <Label Content="Address:" HorizontalAlignment="Left" Margin="313,176,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="17" FontWeight="Bold" Height="42"/>
         <Label Content="Contact Number:" HorizontalAlignment="Left" Margin="244,229,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="17" FontWeight="Bold" Height="42"/>
         <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="321,280,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="17" FontWeight="Bold" Height="42"/>
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Margin="56,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="588" VerticalContentAlignment="Center" Height="36" FontSize="17"/>
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Margin="56,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="588" VerticalContentAlignment="Center" Height="36" FontSize="17" TextChanged="SearchBox_TextChanged"/>
         <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="392,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" VerticalContentAlignment="Center" Height="38" FontSize="17" TextChanged="NameBox_TextChanged"/>
         <TextBox x:Name="NumBox" HorizontalAlignment="Left" Margin="392,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" VerticalContentAlignment="Center" Height="38" FontSize="17" TextChanged="NumBox_TextChanged"/>
-        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Margin="392,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" VerticalContentAlignment="Center" Height="38" FontSize="17"/>
-        <TextBox x:Name="AddBox" HorizontalAlignment="Left" Margin="392,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" VerticalContentAlignment="Center" Height="38" FontSize="17"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="56,119,459,46" FontSize="17" SelectionChanged="ListBox_SelectionChanged"/>
-        <Button Content="Add" HorizontalAlignment="Left" Height="32" Margin="412,338,0,0" VerticalAlignment="Top" Width="66" FontSize="14"/>
-        <Button Content="Update" HorizontalAlignment="Left" Height="32" Margin="494,338,0,0" VerticalAlignment="Top" Width="66" FontSize="14"/>
-        <Button Content="Remove" HorizontalAlignment="Left" Height="32" Margin="576,338,0,0" VerticalAlignment="Top" Width="63" FontSize="14"/>
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Margin="392,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" VerticalContentAlignment="Center" Height="38" FontSize="17" TextChanged="EmailBox_TextChanged"/>
+        <TextBox x:Name="AddBox" HorizontalAlignment="Left" Margin="392,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" VerticalContentAlignment="Center" Height="38" FontSize="17" TextChanged="AddBox_TextChanged"/>
+        <ListBox x:Name="ContactList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="56,119,459,46" FontSize="17" SelectionChanged="ContactList_SelectionChanged"/>
+        <Button x:Name="AddBtn" Content="Add" HorizontalAlignment="Left" Height="32" Margin="412,338,0,0" VerticalAlignment="Top" Width="66" FontSize="14" Click="AddBtn_Click"/>
+        <Button x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Height="32" Margin="494,338,0,0" VerticalAlignment="Top" Width="66" FontSize="14" Click="UpdateBtn_Click"/>
+        <Button x:Name="RemoveBtn" Content="Remove" HorizontalAlignment="Left" Height="32" Margin="576,338,0,0" VerticalAlignment="Top" Width="63" FontSize="14" Click="RemoveBtn_Click"/>
 
     </Grid>
 </Window>
